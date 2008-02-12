@@ -1,0 +1,24 @@
+ ---
+ What is the FuGE XSD STK?
+ ---
+ Allyson Lister
+ ---
+ February 2008
+
+Purpose of the XSD STK and its relation to the greater FuGE Toolkit Project
+
+  The FuGE software tools are separated based on their development goals. The FuGE XSD Project has been specifically
+  created to aid
+
+  * those who wish to be able re-create or modify the FuGE XSD for their own purposes
+
+  * developers of community extension XSDs
+
+  []
+
+  When you check-out the <<<xsd-stk>>> subversion repository, you will get a {{{http://maven.apache.org} Maven2 }}
+  project. As provided, this project re-creates the FuGE xsd only. However, with a couple of simple modifications a custom
+  UML model can be created, and a community-specific XSD based on the FuGE model can be made. Full instructions for
+  compiling this project and generating the base FuGE XSD, as well as for creating community extensions of FuGE are
+  included in this document in the {{{install.html} Installation}} chapter.
+

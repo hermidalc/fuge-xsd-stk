@@ -1,0 +1,11 @@
+ ---
+ The FuGE-OM and the FuGE XSD
+ ---
+ Allyson Lister
+ ---
+ February 2008
+
+What is the relationship between the FuGE XSD and the FuGE-OM?
+
+    In the FuGE development process, the master version of the FuGE structure is the Object Model, written with UML
+    and, using Maven 2 and AndroMDA, translated into an XSD.

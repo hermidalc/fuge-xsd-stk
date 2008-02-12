@@ -1,0 +1,48 @@
+<book>
+    <id>fuge-xsd</id>
+    <title>FuGE XSD Generation User Manual</title>
+    <chapters>
+        <chapter>
+            <id>intro</id>
+            <title>Introduction</title>
+            <sections>
+                <section>
+                    <id>downloading-for-offline-use</id>
+                </section>
+                <section>
+                    <id>what-is-fuge-xsd</id>
+                </section>
+                <section>
+                    <id>relation-to-uml</id>
+                </section>
+                <section>
+                    <id>getting-started</id>
+                </section>
+            </sections>
+        </chapter>
+        <chapter>
+            <id>install</id>
+            <title>Installation</title>
+            <sections>
+                <section>
+                    <id>check-out</id>
+                </section>
+                <section>
+                    <id>generate-fuge-xsd</id>
+                </section>
+            </sections>
+        </chapter>
+        <chapter>
+            <id>extend</id>
+            <title>Extending the FuGE XSD</title>
+            <sections>
+                <section>
+                    <id>create-community-uml</id>
+                </section>
+                <section>
+                    <id>create-community-xsd</id>
+                </section>
+            </sections>
+        </chapter>
+    </chapters>
+</book>

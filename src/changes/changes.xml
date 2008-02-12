@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document>
+    <properties>
+        <title>SyMBA</title>
+        <author email="allysonlister.AT.users.DOT.sourceforge.DOT.net">Allyson Lister</author>        
+    </properties>
+    <body>
+        <!--<release version="current" description="Current work version">-->
+            <!--<action dev="Allyson Lister" type="add">-->
+                <!--A new cool feature.-->
+            <!--</action>-->
+        <!--</release>-->
+        <release version="1.0-SNAPSHOT" date="2008-02-11" description="First test release">
+            <action dev="Allyson Lister" type="add">
+                Created the subversion repository and this documentation. It is all still at an early stage, and
+                needs work. Please contact fuge-devel@lists.sourceforge.net if you have any suggestions or
+                comments.
+            </action>
+        </release>
+    </body>
+</document>

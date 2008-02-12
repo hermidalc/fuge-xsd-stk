@@ -1,0 +1,87 @@
+ ---
+ Converting Your UML Into a Community XSD
+ ---
+ Allyson Lister
+ Olga Tchuvatkina
+ ---
+ February 2008
+
+Creating Your Community XSD
+
+    You've created a plain vanilla FuGE XSD. You've also extended the FuGE UML and made your own community extension.
+    What's next? The final step is to translate your new UML into an XSD.
+
+    These instructions are based on http://wiki.ficcs.org/ficcs/FuGE-to-XSD, with further additions and modifications
+    to suit this toolkit.
+
+* Change Maven 2 Setup
+
+    The default setup as provided when you checked out this project from Subversion is to generate the FuGE XSD only.
+    There are a few small changes to the
+
+* Change AndroMDA Setup
+
+    The default setup as provided when you checked out this project from Subversion is to generate the FuGE XSD only.
+    There are a few small changes to the AndroMDA configuration files that you'll need to make to ensure that your
+    new community extension is recognized and processed by AndroMDA.
+
+    [[1]] <<Specify a joined or separate XSD.>> By default, the XSD generated will contain all of the FuGE XSD as well
+    as your community XSD. If you do not wish this to occur, you will need to tell AndroMDA this. You do this by
+    going into the <<<mda/src/cartridge/custom/templates/xmlschema>>> directory and selecting a different vsl file than
+    the one provided by default. First, rename the original <<<XmlSchema.vsl>>> file so you can go back to using
+    it if you ever need to:
+
++---
+    mv XmlSchema.vsl XmlSchema-shared.vsl
++---
+
+      Then, rename <<<XmlSchema-for-extensions.vsl>>> to <<<XmlSchema.vsl>>>:
+
++---
+    mv XmlSchema-for-extensions.vsl XmlSchema.vsl
++---
+
+    [[top-level list item]] <<Follow the instructions in the new XmlSchema.vsl.>> Open up your new <<<XmlSchema.vsl>>>
+    in a text editor and read the instructions at the top of the file. Make the changes within the vsl file as
+    instructed.
+
+    [[top-level list item]] <<Modify the AndroMDA configuration file>>, <<<mda/src/main/config/andromda.xml>>>.
+    This tells AndroMDA what bits of the XSDs to create. We will be modifying this part of the configuration file:
+
++---
+     <modelPackages processAll="true">
+         <modelPackage process="true">FuGE::**</modelPackage>
+     </modelPackages>
++---
+
+      If you decided in the previous step to generate a joined XSD with both the FuGE and your community's schema,
+      then you just have to add your own package name as a <<<modelPackage>>> element:
+
++---
+     <modelPackages processAll="true">
+         <modelPackage process="true">FuGE::**</modelPackage>
+         <modelPackage process="true">your.package.name::**</modelPackage>
+     </modelPackages>
++---
+
+      If you decided in the previous step to just generate your community's schema, then you need to set
+      <<<processAll>>> as well as the processing of the FuGE package to <<<false>>>:
+
++---
+     <modelPackages processAll="false">
+         <modelPackage process="false">FuGE::**</modelPackage>
+         <modelPackage process="true">your.package.name::**</modelPackage>
+     </modelPackages>
++---
+
+      For general interest, you can flip which package is generated at any time by changing the <<<process>>> attribute
+      of the <<<modelPackage>>> element and re-generating the XSD.
+
+    [[top-level list item]] <<Re-run the Maven 2 build process.>> Change into the top-level
+    trunk/ directory, and run this command:
+
++--
+        mvn install
++--
+
+        You should see a "BUILD SUCCESSFUL" message at the end of it.

@@ -1,0 +1,13 @@
+<xs:schema elementFormDefault="qualified" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.1" targetNamespace="calendar-schemalet">
+    <xs:annotation>
+        <xs:appinfo>
+            <jaxb:globalBindings>
+                <jaxb:javaType name="java.util.Date" xmlType="xs:date"
+                               parseMethod="net.sourceforge.fuge.util.DateAdapter.parseDate"
+                               printMethod="net.sourceforge.fuge.util.DateAdapter.printDate"
+                        />
+            </jaxb:globalBindings>
+        </xs:appinfo>
+    </xs:annotation>
+</xs:schema>
