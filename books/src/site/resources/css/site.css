@@ -10,11 +10,11 @@ body {
 }
 
 /* LINKS COLORS */
-A:link    { color: #000000; }
+/*A:link    { color: #000000; }*/
 A:active  { color: #003366; }
-A:visited { color: #555555; } 
+A:visited { color: #555555; }
 
-h1 {	
+h1 {
   text-align: left;
   font-family: helvetica, sans-serif, arial, serif;
 }
