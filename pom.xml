@@ -317,7 +317,7 @@
         </dependency>
     </dependencies>
     <build>
-        <!--<defaultGoal>install</defaultGoal>-->
+        <defaultGoal>install</defaultGoal>
         <plugins>
             <plugin>
                 <groupId>org.andromda.maven.plugins</groupId>
