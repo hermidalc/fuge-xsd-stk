@@ -1,7 +1,7 @@
 
     Copyright Notice
 
-    © 2007-8 Proteomics Standards Initiative / Microarray and Gene Expression
+    copyright 2007-8 Proteomics Standards Initiative / Microarray and Gene Expression
     Data Society
 
     This is a document distributed under the terms of the
