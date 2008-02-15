@@ -44,5 +44,29 @@
                 </section>
             </sections>
         </chapter>
+        <chapter>
+            <id>example-code</id>
+            <title>Example Java Code Provided in the STK</title>
+            <sections>
+                <section>
+                    <id>randomly-generated-xml</id>
+                </section>
+                <section>
+                    <id>example-inout</id>
+                </section>
+            </sections>
+        </chapter>
+        <chapter>
+            <id>contribute</id>
+            <title>Would You Like to Contribute?</title>
+            <sections>
+                <section>
+                    <id>become-fuge-xsd-stk-developer</id>
+                </section>
+                <section>
+                    <id>help-for-fuge-xsd-stk-developers</id>
+                </section>
+            </sections>
+        </chapter>
     </chapters>
 </book>

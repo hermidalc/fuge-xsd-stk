@@ -10,6 +10,21 @@
                 <!--A new cool feature.-->
             <!--</action>-->
         <!--</release>-->
+        <!--<release version="1.0" date="" description="First stable release">-->
+            <!--<action dev="Andy Jones" type="update">-->
+                <!--Renamed FuGE-profile.mdzip to FuGE-v1-profile.mdzip to match the name of the mdzip file when downloaded-->
+                <!--on its own-->
+            <!--</action>-->
+            <!--<action dev="Allyson Lister" type="add">-->
+                <!--Added Identifier Maker code, allowing users to generate a variety of identifiers.-->
+            <!--</action>-->
+            <!--<action dev="Allyson Lister" type="add">-->
+                <!--Added classes to generate Random XML-->
+            <!--</action>-->
+            <!--<action dev="Allyson Lister" type="add">-->
+                <!--Added example classes for inputting/outputting XML.-->
+            <!--</action>-->
+        <!--</release>-->
         <release version="1.0-SNAPSHOT" date="2008-02-11" description="First test release">
             <action dev="Allyson Lister" type="add">
                 Created the subversion repository and this documentation. It is all still at an early stage, and
