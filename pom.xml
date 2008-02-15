@@ -590,7 +590,8 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <aggregate>true</aggregate>
-                    <sourcepath>${pom.basedir}/fuge-jaxb2/target</sourcepath>
+                    <sourcepath>${pom.basedir}/fuge-jaxb2/target;${pom.basedir}/fuge-jaxb2/src/main/java</sourcepath>
+                    <show>private</show>
                 </configuration>
             </plugin>
             <plugin>
