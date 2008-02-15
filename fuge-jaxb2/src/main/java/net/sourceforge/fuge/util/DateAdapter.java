@@ -5,18 +5,33 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-/* SyMBA is covered under the GNU Lesser General Public License (LGPL).
+/**
+ * <p/>
+ * Copyright Notice
+ * <p/>
+ * copyright 2007-8 Proteomics Standards Initiative / Microarray and Gene Expression
+ * Data Society
+ * <p/>
+ * This is a document distributed under the terms of the
+ * Creative Commons Attribution License
+ * (http://creativecommons.org/licenses/by/3.0/), which permits
+ * unrestricted use, distribution, and reproduction in any medium,
+ * provided the original work is properly cited.
+ * <p/>
+ * Acknowledgements
+ * The authors wish to thank the Proteomics Standards Initiative for
+ * the provision of infrastructure and expertise in the form of the PSI
+ * Document Process that has been used to formalise this document.
+ * <p/>
+ * This file is based on code originally part of SyMBA (http://symba.sourceforge.net).
+ * SyMBA is covered under the GNU Lesser General Public License (LGPL).
  * Copyright (C) 2007 jointly held by Allyson Lister, Olly Shaw, and their employers.
- * To view the full licensing information for this software and ALL other files contained
- * in this distribution, please see LICENSE.txt
- *
- * $LastChangedDate: 2007-09-09 09:25:30 +0100 (Sun, 09 Sep 2007) $
- * $LastChangedRevision: 4 $
- * $Author: allysonlister $
- * $HeadURL: https://symba.svn.sourceforge.net/svnroot/symba/trunk/jaxb2/src/main/java/fugeOM/util/DateAdapter.java $
- *
+ * <p/>
+ * $LastChangedDate$
+ * $LastChangedRevision$
+ * $Author$
+ * $HeadURL$
  */
-
 public class DateAdapter {
     public static Date parseDate( String s ) {
         return DatatypeConverter.parseDateTime( s ).getTime();
