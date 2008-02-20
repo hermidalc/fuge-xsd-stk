@@ -33,16 +33,17 @@ Update the FuGE-OM from previous version
 
 * Steps
 
-	If you have already built an extension based on previous FuGE-OM, and you want to upgrade it to latest FuGE-OM, follow the below steps.
-	
-	[[1]] download all of the andromda profiles from the {{{http://team.andromda.org/maven2/org/andromda/profiles/uml2/} andromda's maven2 }} site, put them all in one directory called "andromda-profiles".
+    If you have already built an extension based on previous FuGE-OM, and you want to upgrade it to latest FuGE-OM,
+    follow the below steps.
 
-    [[top-level list item]] create new MagicDraw project named it like "magev2" 
+    [[1]] download all of the andromda profiles from the {{{http://team.andromda.org/maven2/org/andromda/profiles/uml2/} andromda's maven2 }} site, put them all in one directory called andromda-profiles.
 
- 	[[top-level list item]] select MagicDraw menu File->use module, choose andromda-profile-3.2-.xml.zip in the "andromda-profiles" directory. MagicDraw will then ask for the androMDA's xml, webservice, service, process profile files, find them in that "andromda-profiles" directory.
+    [[top-level list item]] create new MagicDraw project named it like "magev2"
 
-	[[top-level list item]] select MagicDraw menu File->use module, choose FuGE-v1-profile.mdzip.
-	
-	[[top-level list item]] select MagicDraw menu File->import MagicDraw project, choose your extension's MagicDraw project file which uses previous version of FuGE-OM, the MagicDraw will load it, automatically figure out the dependence on latest FuGE profile, update the project root name and import the MAGE package.
+    [[top-level list item]] select MagicDraw menu File->use module, choose andromda-profile-3.2-.xml.zip in the "andromda-profiles" directory. MagicDraw will then ask for the androMDA's xml, webservice, service, process profile files, find them in that "andromda-profiles" directory.
+
+    [[top-level list item]] select MagicDraw menu File->use module, choose FuGE-v1-profile.mdzip
+
+    [[top-level list item]] select MagicDraw menu File->import MagicDraw project, choose your extension's MagicDraw project file which uses previous version of FuGE-OM, the MagicDraw will load it, automatically figure out the dependence on latest FuGE profile, update the project root name and import the MAGE package.
 	
 	
