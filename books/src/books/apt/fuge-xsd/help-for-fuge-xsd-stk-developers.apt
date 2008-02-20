@@ -81,6 +81,16 @@ Re-Building the FuGE XSD STK Website
     <<<mvn site:deploy>>> command. However, to prevent accidental copying, the shell.sf.net site element is commented
     out. Please ensure this remains the case when you are committing changes to SVN.
 
+    Also edit your <<<$M2_HOME/settings.xml>>> file by adding the following:
+
++--
+ <server>
+ <id>shell.sf.net</id>
+ <username>your sf username</username>
+ <password>your sf password</password>
+ </server>		
++--
+
     <<<mvn site:deploy>>> JUST copies the already-generated site docs. If you make a change to any of the APT files, you
     must run <<<mvn site:site>>> FIRST, to re-generate the site docs, THEN <<<mvn site:deploy>>> to copy them to the
     final location described in the distributionManagement element of the pom.xml
