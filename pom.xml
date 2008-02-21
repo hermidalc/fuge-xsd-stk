@@ -117,6 +117,18 @@
             <timezone>0</timezone>
             <properties></properties>
         </developer>
+		<developer>
+            <id>junmin_liu</id>
+            <name>Junmin Liu</name>
+            <email>junmin_liu@users.sourceforge.net</email>
+            <organization>CBIL, University of Pennsylvania</organization>
+            <organizationUrl>http://www.cbil.upenn.edu</organizationUrl>
+            <roles>
+                <role>Developer</role>
+            </roles>
+            <timezone>0</timezone>
+            <properties></properties>
+        </developer>
     </developers>
     <!--
      mvn site:deploy : For FuGE Developers only
@@ -148,10 +160,10 @@
             <id>local-test</id>
             <url>scp://localhost/media/share/website-test/</url>
         </site>
-        <!--<site>-->
-            <!--<id>shell.sf.net</id>-->
-            <!--<url>scp://shell.sf.net/home/groups/f/fu/fuge/htdocs/stks/xsd-stk</url>-->
-        <!--</site>-->
+        <!--site>
+            <id>shell.sf.net</id>
+            <url>scp://shell.sf.net/home/groups/f/fu/fuge/htdocs/stks/xsd-stk</url>
+        </site-->
     </distributionManagement>
     <organization>
         <name>FuGE</name>
