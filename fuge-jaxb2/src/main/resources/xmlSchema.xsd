@@ -986,9 +986,9 @@
  	<xsd:attribute name="action" use="required">
 		<xsd:simpleType>
 			<xsd:restriction base="xsd:NMTOKEN">
-									<xsd:enumeration value="CREATION"/>
-						<xsd:enumeration value="MODIFICATION"/>
-						<xsd:enumeration value="DELETION"/>
+									<xsd:enumeration value="creation"/>
+						<xsd:enumeration value="modification"/>
+						<xsd:enumeration value="deletion"/>
 					</xsd:restriction>
 		</xsd:simpleType>
 	</xsd:attribute>
@@ -2338,7 +2338,7 @@
   
   <xsd:complexType name="FuGE.Common.Ontology.OntologyTermType" abstract = "true">
      <xsd:annotation>
-          <xsd:documentation> A single entry from an ontology or a controlled vocabulary.   If it is a simple controlled vocabulary, there may be no formal accession for the term. In these cases the local name should be repeated in both term and termAccession. If the term has a value, the OntologyIndividual will have a single DataProperty whose value was the value for the property.   For instance, for an OntologyIndividual based on the MO ontology the attributes might be:   The term would be what is usually called the local name in the Ontology, for instance 'Age';   The termAccession could be 'http://mged.sourceforge.net/ontologies/MGEDOntology.owl#Age' or a an arbitrary accession if one exists;   The identifier is a unique identifier for individuals in the scope of the FuGE instance;   The inherited name attribute should not be used;   The ontologyURI of OntologySource could be 'http://mged.sourceforge.net/ontologies/MGEDOntology.owl".   The OntologyTerm subclasses are instances of Ontology classes and properties, not the actual terms themselves.  An OntologyIndividual, if based on an existing Ontology, can be considered a statement that can be validated against the referenced ontology.   The subclasses and their associations are based on the Ontology Definition Model, ad/2005-04-13, submitted to the OMG as a response to RFP ad/2003-03-40,   Copyright © 2005 DSTC Pty Ltd.   Copyright © 2005 IBM   Copyright © 2005 Sandpiper Software, Inc   under the standard OMG license terms. </xsd:documentation>
+          <xsd:documentation> A single entry from an ontology or a controlled vocabulary.   If it is a simple controlled vocabulary, there may be no formal accession for the term. In these cases the local name should be repeated in both term and termAccession. If the term has a value, the OntologyIndividual will have a single DataProperty whose value was the value for the property.   For instance, for an OntologyIndividual based on the MO ontology the attributes might be:   The term would be what is usually called the local name in the Ontology, for instance 'Age';   The termAccession could be 'http://mged.sourceforge.net/ontologies/MGEDOntology.owl#Age' or a an arbitrary accession if one exists;   The identifier is a unique identifier for individuals in the scope of the FuGE instance;   The inherited name attribute should not be used;   The ontologyURI of OntologySource could be 'http://mged.sourceforge.net/ontologies/MGEDOntology.owl".   The OntologyTerm subclasses are instances of Ontology classes and properties, not the actual terms themselves.  An OntologyIndividual, if based on an existing Ontology, can be considered a statement that can be validated against the referenced ontology.   The subclasses and their associations are based on the Ontology Definition Model, ad/2005-04-13, submitted to the OMG as a response to RFP ad/2003-03-40,   Copyright 2005 DSTC Pty Ltd.   Copyright 2005 IBM   Copyright 2005 Sandpiper Software, Inc   under the standard OMG license terms. </xsd:documentation>
 		 </xsd:annotation>
     <xsd:complexContent>
      <xsd:extension base="fuge:FuGE.Common.IdentifiableType">

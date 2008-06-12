@@ -38,7 +38,9 @@
                 <property name="operationNameMask">none</property>
                 <property name="roleNameMask">none</property>
                 <property name="enumerationNameMask">none</property>
-                <property name="enumerationLiteralNameMask">upperunderscore</property>
+                <!--<property name="enumerationLiteralNameMask">upperunderscore</property>-->
+                <!-- AL 2008/06: Changed the mask to lowerunderscore, as we need the enumerations to match those put into the xsd -->
+                <property name="enumerationLiteralNameMask">lowerunderscore</property>
                 <property name="entityNameMask">none</property>
                 <property name="entityPropertyNameMask">none</property>
                 <property name="parameterNameMask">none</property>
