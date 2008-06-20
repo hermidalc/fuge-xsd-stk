@@ -1,10 +1,5 @@
 package net.sourceforge.fuge.util;
 
-import org.xml.sax.SAXException;
-
-import javax.xml.bind.JAXBException;
-import java.io.FileNotFoundException;
-
 /**
  * <p/>
  * Copyright Notice
@@ -38,38 +33,24 @@ public class GenerateRandomXml {
      * Read in user-provided arguments and produce 3 files of random XML based on the provided XSD. Please note that this
      * is only guaranteed to work with the FuGE V1 XSD. Any modifications or extensions to that XSD will require
      * changes in the RandomXmlGenerator class.
+     * <p/>
+     * the output xml file (second argument) is used to generate the output filenames. For example, "output.xml"
+     * would produce output0.xml, output1.xml, and output2.xml
      *
      * @param args 2 arguments in this order: schema-file output-xml-file
      * @throws Exception if the number of arguments isn't 2
      */
     public static void main( String[] args ) throws Exception {
 
-        try {
-            if ( args.length != 2 )
-                throw new java.lang.Exception( "You must provide 2 arguments in this order: schema-file output-xml-file" );
+        if ( args.length != 2 )
+            throw new java.lang.Exception( "You must provide 2 arguments in this order: schema-file output-xml-file" );
 
-            RandomXmlGenerator xml = new RandomXmlGenerator( args[0], args[1] );
-            xml.generate();
+        String name = args[1].substring( 0, args[1].lastIndexOf( "." ) );
+        String ext = args[1].substring( args[1].lastIndexOf( "." ) );
 
-        } catch ( JAXBException je ) {
-            System.err.println( "JAXB Exception:" );
-//            try {
-//                os.flush();
-//                System.err.println( "Output buffer flushed." );
-//            } catch ( IOException e ) {
-//                System.err.println( "Internal IO Exception when flushing buffer" );
-//                e.printStackTrace();
-//            } catch ( NullPointerException e ) {
-//                System.err.println( "Null Pointer Exception when flushing buffer" );
-//                e.printStackTrace();
-//            }
-            je.printStackTrace();
-        } catch ( FileNotFoundException e ) {
-            e.printStackTrace();
-        } catch ( SAXException e ) {
-            e.printStackTrace();
-        } catch ( Exception e ) {
-            e.printStackTrace();
+        // make 3 versions of the file
+        for ( int i = 0; i < 3; i++ ) {
+            RandomXmlGenerator.generate( args[0], name + String.valueOf( i ) + ext );
         }
     }
 
