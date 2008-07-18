@@ -17,8 +17,7 @@
 
         <menu name="FuGE XSD Information">
             <item name="XSD STK Home" href="index.html"/>
-            <item name="Introduction" href="fuge-books/fuge-xsd/index.html"/>
-            <item name="Installation" href="fuge-books/fuge-xsd/install.html"/>
+            <item name="Installation" href="fuge-books/fuge-xsd/index.html"/>
             <item name="For Community Developers" href="fuge-books/fuge-xsd/extend.html"/>
             <!--<item name="Future Plans" href="plans.html"/>-->
         </menu>
