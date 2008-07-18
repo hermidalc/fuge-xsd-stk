@@ -5,6 +5,18 @@
  ---
  February 2008
 
+Background
+
+ The FuGE XSD STK is a lightweight Maven project that uses AndroMDA to read in the UML diagram, or diagrams,
+ and produce an XSD from the UML. AndroMDA has limited XML support, and cannot yet generate FuGE-ML that can be
+ validated against the XSD. Therefore the STK also includes a JAXB2 sub-project that will automatically build
+ XML-binding Java classes based on the auto-generated XSD. The FuGE XSD and FuGE-JAXB2 jar built by this STK will be 
+ available on the FuGE Maven2 Repository for both other STKs and external developers to access. Syntactic validation
+ of XML documents based on the generated XSD can be performed by utilizing the JAXB2 code that is created within the
+ project. Example Java classes are also provided to show developers how to input, output, validate, manipulate, and
+ generate validated random output.
+
+
 Purpose of the XSD STK and its relation to the greater FuGE Toolkit Project
 
   The FuGE software tools are separated based on their development goals. The FuGE XSD Project has been specifically
