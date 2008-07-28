@@ -98,7 +98,7 @@ Installation and Generation of the FuGE XSD
         (or whatever you have set "localRepository" to be, or by default, it resides in your-home-dir/.m2/repository).
 
         [[level-2 list item]] Verify that the following directory was created (switch the slashes around
-        for Windows): <<<$M2_REPO/org/andromda/maven/plugins/andromda-maven-plugin>>>
+        for Windows): <<<$M2_REPO/org/andromda/maven/plugins/andromdapp-maven-plugin>>>
 
         [[level-2 list item]] Create a temporary directory, e.g. <<<C:\andromda-temp>>> or <<<$HOME/andromda-temp>>>.
 
