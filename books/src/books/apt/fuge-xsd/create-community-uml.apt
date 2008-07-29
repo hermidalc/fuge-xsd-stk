@@ -28,6 +28,8 @@ Extending the FuGE-OM
     {{{http://fuge.sourceforge.net/dev/V1Final/FuGEv1-refManual.html} Reference Manual}}. Further, there is a FuGE paper
     in {{{http://www.nature.com/nbt/journal/v25/n10/full/nbt1347.html} Nature Biotechnology}}.
 
+    Please continue to the next section of the chapter to see how to convert your modified UML into an XSD. 
+
 
 Update the FuGE-OM from previous version
 

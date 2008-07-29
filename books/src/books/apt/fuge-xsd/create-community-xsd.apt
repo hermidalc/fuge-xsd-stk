@@ -14,10 +14,18 @@ Creating Your Community XSD
     These instructions are based on http://wiki.ficcs.org/ficcs/FuGE-to-XSD, with further additions and modifications
     to suit this toolkit.
 
+    The default setup as provided when you checked out this project from Subversion is to generate the FuGE XSD only.
+    There are a couple of changes to both the Maven properties file and the Andromda properties file
+
 * Change Maven 2 Setup
 
-    The default setup as provided when you checked out this project from Subversion is to generate the FuGE XSD only.
-    There are a few small changes to the
+    * If you have changed the name of the NewFuGEExtension.mdzip, then please update the value in
+      <<<trunk/mda/pom.xml>>> to match your file name:
+
++---
+        <extension.model.uri>file:${project.build.sourceDirectory}/NewFuGEExtension.uml2</extension.model.uri>  
++---
+
 
 * Change AndroMDA Setup
 
@@ -77,8 +85,32 @@ Creating Your Community XSD
       For general interest, you can flip which package is generated at any time by changing the <<<process>>> attribute
       of the <<<modelPackage>>> element and re-generating the XSD.
 
-    [[top-level list item]] <<Re-run the Maven 2 build process.>> Change into the top-level
-    trunk/ directory, and run this command:
+  * Un-comment the following line from the <<<andromda.xml>>> file you were modifying. It is just above the
+    modelPackages element:
+
++---
+                      <!--<uri>${extension.model.uri}</uri>-->
++---
+
+* Export the UML in XMI/UML2 format
+
+    FuGE, and the extension you're working on, is stored in Subversion as a MagicDraw 15.0 zip file. In order
+    for AndroMDA to be able to process it, you need to convert it into a more standard file format.
+
+    * Open up your mdzip file in MagicDraw 15.0. Once opened, perform the following export:
+
++--
+    File -> Export -> EMF UML2 (v1.x) XMI
+    Ensure you select the trunk/mda/src/main/uml directory as the export directory
+    Click "Export"
++--
+      This conversion will produce a number of files, all ending with the extension <<<.uml2>>>. If you make any changes
+      to the FuGE-OM, you will need to re-export all of the files again by following the directions above.
+
+
+* Re-run the Maven 2 build process
+
+  Change into the top-level trunk/ directory, and run this command:
 
 +--
         mvn install

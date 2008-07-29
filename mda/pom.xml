@@ -70,6 +70,7 @@
     <properties>
       <andromda.version>3.2</andromda.version>
       <model.uri>file:${project.build.sourceDirectory}/FuGE-v1-profile.uml2</model.uri>
+      <extension.model.uri>file:${project.build.sourceDirectory}/NewFuGEExtension.uml2</extension.model.uri>
         <filter></filter>
         <validation>true</validation>
         <conf.dir>${pom.basedir}/src/main/config</conf.dir>

@@ -12,6 +12,7 @@
             <models>
                 <model type="emf-uml2">
                     <uri>${model.uri}</uri>
+                    <!--<uri>${extension.model.uri}</uri>-->
                     <moduleSearchLocations>
                         <location patterns="**/*.uml2">${project.build.sourceDirectory}/md11test/emf/</location>
                         <location patterns="*.uml2">${project.build.sourceDirectory}/</location>
