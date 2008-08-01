@@ -146,14 +146,14 @@
      /home/groups/f/fu/fuge/htdocs/stks/xsd-stk/
      -->
     <distributionManagement>
+        <!--<site>-->
+            <!--<id>local-test</id>-->
+            <!--<url>scp://localhost/media/share/website-test/</url>-->
+        <!--</site>-->
         <site>
-            <id>local-test</id>
-            <url>scp://localhost/media/share/website-test/</url>
-        </site>
-        <!--site>
             <id>shell.sf.net</id>
             <url>scp://shell.sf.net/home/groups/f/fu/fuge/htdocs/stks/xsd-stk</url>
-        </site-->
+        </site>
     </distributionManagement>
     <organization>
         <name>FuGE</name>
