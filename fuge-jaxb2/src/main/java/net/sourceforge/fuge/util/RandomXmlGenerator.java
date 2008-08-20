@@ -615,6 +615,23 @@ public class RandomXmlGenerator {
         }
 
         if ( fugeXML.getMaterialCollection() != null ) {
+            // input complete material
+            FuGECommonProtocolGenericProtocolApplicationType.InputCompleteMaterials icmXML =
+                    new FuGECommonProtocolGenericProtocolApplicationType.InputCompleteMaterials();
+            icmXML.setMaterialRef(
+                    fugeXML.getMaterialCollection().getMaterial().get( ordinal ).getValue().getIdentifier() );
+            genericProtocolApplicationXML.getInputCompleteMaterials().add( icmXML );
+
+            // input material
+            FuGEBioMaterialGenericMaterialMeasurementType gmmXML = new FuGEBioMaterialGenericMaterialMeasurementType();
+            gmmXML.setMaterialRef(
+                    fugeXML.getMaterialCollection().getMaterial().get( ordinal ).getValue().getIdentifier() );
+            ObjectFactory factory = new ObjectFactory();
+            FuGECommonMeasurementRangeType valueXML = ( FuGECommonMeasurementRangeType )
+                    generateRandomMeasurementXML( new FuGECommonMeasurementRangeType(), fugeXML );
+            gmmXML.setMeasurement( factory.createRange( valueXML ) );
+            genericProtocolApplicationXML.getGenericMaterialMeasurement().add( gmmXML );
+
             // output material
             FuGECommonProtocolGenericProtocolApplicationType.OutputMaterials gomXML = new FuGECommonProtocolGenericProtocolApplicationType.OutputMaterials();
             gomXML.setMaterialRef(
@@ -646,8 +663,8 @@ public class RandomXmlGenerator {
                 FuGECommonProtocolParameterValueType pvalueXML = new FuGECommonProtocolParameterValueType();
                 pvalueXML = ( FuGECommonProtocolParameterValueType ) generateRandomDescribableXML( pvalueXML );
                 pvalueXML.setParameterRef( eqXML.getGenericParameter().get( 0 ).getIdentifier() );
-                pvalueXML.setMeasurement( ( new ObjectFactory() ).createComplexValue(
-                        ( FuGECommonMeasurementComplexValueType ) generateRandomMeasurementXML( new FuGECommonMeasurementComplexValueType(), fugeXML ) ) );
+                pvalueXML.setMeasurement( ( new ObjectFactory() ).createAtomicValue(
+                        ( FuGECommonMeasurementAtomicValueType ) generateRandomMeasurementXML( new FuGECommonMeasurementAtomicValueType(), fugeXML ) ) );
                 parameterizableApplicationXML.getParameterValue().add( pvalueXML );
             }
         }

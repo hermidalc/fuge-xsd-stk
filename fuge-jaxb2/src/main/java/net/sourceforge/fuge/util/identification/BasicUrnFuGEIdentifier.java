@@ -58,7 +58,10 @@ public class BasicUrnFuGEIdentifier extends FuGEIdentifier {
      * @return the new identifier
      */
     public String create( String className ) {
-        String entityType = className.substring( className.lastIndexOf( "." ) + 1 );
+        String entityType = className;
+        if ( className.contains( "." ) ) {
+            entityType = entityType.substring( entityType.lastIndexOf( "." ) + 1 );
+        }
         return "urn:" + getDomainName() + ":" + entityType + ":" + UUID.randomUUID().toString();
     }
 }
