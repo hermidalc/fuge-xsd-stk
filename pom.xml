@@ -58,9 +58,9 @@
     </mailingLists>
     <licenses>
         <license>
-          <name>The MIT License</name>
-          <url>http://fuge.svn.sourceforge.net/viewvc/fuge/hibernate-stk/trunk/LICENSE.txt</url>
-          <distribution>manual</distribution>
+            <name>The MIT License</name>
+            <url>http://fuge.svn.sourceforge.net/viewvc/fuge/hibernate-stk/trunk/LICENSE.txt</url>
+            <distribution>manual</distribution>
         </license>
     </licenses>
     <scm>
@@ -107,7 +107,7 @@
             <timezone>0</timezone>
             <properties></properties>
         </developer>
-		<developer>
+        <developer>
             <id>junmin_liu</id>
             <name>Junmin Liu</name>
             <email>junmin_liu@users.sourceforge.net</email>
@@ -154,6 +154,27 @@
             <id>shell.sf.net</id>
             <url>scp://shell.sf.net/home/groups/f/fu/fuge/htdocs/stks/xsd-stk</url>
         </site-->
+        <!--
+        The repository and snapshotRepository can be used to upload the jaxb2 jar produced by this STK, as it is
+        used within the Hibernate STK. You can upload jars individually via a deploy-file
+        command such as:
+        mvn deploy:deploy-file -DgroupId=net.sourceforge.fuge -DartifactId=fuge-jaxb2 -Dversion=1.0-SNAPSHOT \
+        -Dpackaging=jar -DrepositoryId=carmen-snapshot \
+        -Durl=scp://carmen.ncl.ac.uk/var/www/maven/repo-snapshot/ -Dfile=/path/to/file
+
+        You must have permission from Carmen to upload here (http://www.carmen.org.uk). Many thanks to them
+        for providing this space
+        -->
+        <repository>
+            <id>carmen</id>
+            <name>Carmen release repository</name>
+            <url>scp://carmen.ncl.ac.uk/var/www/maven/repo/</url>
+        </repository>
+        <snapshotRepository>
+            <id>carmen-snapshot</id>
+            <name>Carmen snapshot / alpha release repository</name>
+            <url>scp://carmen.ncl.ac.uk/var/www/maven/repo-snapshot/</url>
+        </snapshotRepository>
     </distributionManagement>
     <organization>
         <name>FuGE</name>
