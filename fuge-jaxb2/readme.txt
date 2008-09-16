@@ -13,5 +13,3 @@ mvn exec:java -Dexec.mainClass="net.sourceforge.fuge.util.XmlRoundTrip" -Dexec.a
 
 # To add svn properties to a bunch of files (you may wish to change the extension)
 find . \( -name '.svn' -prune \) -o -name '*.java' -exec svn propset svn:keywords "Date Rev Author HeadURL" {} \;
-
-
