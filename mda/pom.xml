@@ -18,9 +18,9 @@
         </dependency>
         <dependency>
             <groupId>org.andromda.cartridges</groupId>
-	    <artifactId>andromda-xmlschema-cartridge</artifactId>
-	    <version>${andromda.version}</version>
-	</dependency>
+            <artifactId>andromda-xmlschema-cartridge</artifactId>
+            <version>${andromda.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.andromda.translationlibraries</groupId>
             <artifactId>andromda-ocl-validation-library</artifactId>
@@ -68,9 +68,12 @@
         </plugins>
     </build>
     <properties>
-      <andromda.version>3.2</andromda.version>
-      <model.uri>file:${project.build.sourceDirectory}/FuGE-v1-profile.uml2</model.uri>
-      <extension.model.uri>file:${project.build.sourceDirectory}/NewFuGEExtension.uml2</extension.model.uri>
+        <andromda.version>3.2</andromda.version>
+        <!-- Removed the reference to file:${project.build.sourceDirectory} in both of the following
+        two variables (model.uri and extension.model.uri) as it can cause problems
+        with directory resolution - see http://www.andromda.org/jira/browse/ANDROMDAPP-40-->
+        <model.uri>${pom.basedir}/src/main/uml/FuGE-v1-profile.uml2</model.uri>
+        <extension.model.uri>${pom.basedir}/src/main/uml/NewFuGEExtension.uml2</extension.model.uri>
         <filter></filter>
         <validation>true</validation>
         <conf.dir>${pom.basedir}/src/main/config</conf.dir>
@@ -79,8 +82,8 @@
         <core.manual.dir>${pom.basedir}/../core/src/main/java</core.manual.dir>
         <web.generated.dir>${pom.basedir}/../web/target/src</web.generated.dir>
         <web.manual.dir>${pom.basedir}/../web/src/main</web.manual.dir>
-        <web.manual.java.dir>${web.manual.dir}/java</web.manual.java.dir> 
-        <common.generated.dir>${pom.basedir}/../common/target/src</common.generated.dir>      
+        <web.manual.java.dir>${web.manual.dir}/java</web.manual.java.dir>
+        <common.generated.dir>${pom.basedir}/../common/target/src</common.generated.dir>
         <!-- hibernate configuration -->
         <!-- default strategy to use when using inhertiance -->
         <hibernate.inheritance.strategy>subclass</hibernate.inheritance.strategy>
